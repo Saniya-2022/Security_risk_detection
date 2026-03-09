@@ -1,0 +1,1 @@
+mongodb+srv://sreejawarangal834_db_user:YfHvsU01SyTGe3GR@fraud-detection-cluster.lmwv5kn.mongodb.net/?appName=fraud-detection-cluster

@@ -1,0 +1,49 @@
+// REGISTER
+function register() {
+  localStorage.setItem("user", regUser.value);
+  localStorage.setItem("pass", regPass.value);
+  alert("Registered Successfully");
+  window.location.href = "index.html";
+}
+
+// LOGIN
+function login() {
+  if (
+    loginUser.value === localStorage.getItem("user") &&
+    loginPass.value === localStorage.getItem("pass")
+  ) {
+    window.location.href = "catalog.html";
+  } else {
+    alert("Invalid Credentials");
+  }
+}
+
+// CART
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to Cart");
+}
+
+// DISPLAY CART
+const cartItems = document.getElementById("cartItems");
+
+if (cartItems) {
+  let total = 0;
+  let html = "<h5>Items</h5><hr>";
+
+  cart.forEach(item => {
+    total += item.price;
+    html += `
+      <div class="d-flex justify-content-between mb-2">
+        <span>${item.name}</span>
+        <span>Rs. ${item.price}</span>
+      </div>
+    `;
+  });
+
+  html += `<hr><h5>Total: Rs. ${total}</h5>`;
+  cartItems.innerHTML = html;
+}

@@ -1,0 +1,15 @@
+[
+    {
+        "timestamp": "2026-02-11T09:57:17.876186+00:00",
+        "file": "test.py",
+        "line": 4,
+        "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "severity": "ERROR",
+        "risk_score": 10,
+        "description": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+        "cve_id": null,
+        "cvss_score": null,
+        "human_readable_alert": "\n\u26a0 SECURITY ALERT\n\nFile: test.py\nLine: 4\nRule ID: python.lang.security.audit.subprocess-shell-true.subprocess-shell-true\nSeverity: ERROR\nRisk Score: 10/10\n\nIssue:\nFound 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.\n\nRecommendation:\nReview this code immediately and apply secure coding best practices.\n",
+        "_id": "698c527d1f920e8a5ba2b752"
+    }
+]
