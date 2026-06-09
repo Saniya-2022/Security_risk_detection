@@ -58,12 +58,3 @@ This Mini SIEM system provides:
 - MongoDB Atlas Account
 - Gmail Account (for email notifications)
 
----
-
-# 🚀 Installation & Setup
-
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/sreejawarangal834/security_risk_detection_with_human_redeable_alerts.git
-cd security_risk_detection_with_human_redeable_alerts
